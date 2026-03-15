@@ -39,7 +39,8 @@ I would play-test the game to make sure my bugs were fixed. Most of these involv
 - In your own words, explain why the secret number kept changing in the original app.
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 - What change did you make that finally gave the game a stable secret number?
-
+The inconsistencies were caused by streamlit not keeping stable values in between runs. If I had to explain it, I would say that it has to reset its values on every run, and if it doesn't fetch them before it uses them, they're liable to be wrong.
+I mostly saw issues with the values input, and the hints, but it was creating a session_state object that ultimately led to stable behaviour
 ---
 
 ## 5. Looking ahead: your developer habits
